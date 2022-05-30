@@ -35,7 +35,7 @@ public class PaymentController {
             if (completed) {
 
                 return ResponseEntity.ok().build();
-            } else throw new Exception("O pagamento não foi realizada");
+            } else throw new Exception("Não foi possivel efetuar o  pagamento");
 
         }catch (Exception e){
             return ResponseEntity.badRequest().build();
