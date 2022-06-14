@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/api/banking/system/payment", produces="application/json")
 @Api(value="API REST Banking System")
@@ -28,18 +29,11 @@ public class PaymentController {
 
     @PostMapping()
     public ResponseEntity<?> payment(@RequestBody @Valid PaymentDTO paymentDTO )throws Exception {
-        try {
 
-            var payment = conversionService.convert(paymentDTO, Payment.class);
-            Boolean completed = paymentService.payment(payment);
-            if (completed) {
+        var payment = conversionService.convert(paymentDTO, Payment.class);
+      paymentService.payment(payment);
 
-                return ResponseEntity.ok().build();
-            } else throw new Exception("Não foi possivel efetuar o  pagamento");
-
-        }catch (Exception e){
-            return ResponseEntity.badRequest().build();
-        }
+         return ResponseEntity.ok().build();
 
     }
     @GetMapping("status/{paymentId}")

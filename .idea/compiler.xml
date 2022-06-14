@@ -6,14 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="banking-system-payment-business" />
         <module name="business" />
         <module name="banking-system-transfer-api" />
         <module name="banking-system-transfer-data-provider" />
         <module name="banking-system-transfer-business" />
+        <module name="banking-system-payment-worker" />
+        <module name="banking-system-payment-data-provider" />
         <module name="data-provider" />
         <module name="api" />
         <module name="worker" />
         <module name="banking-system-transfer-worker" />
+        <module name="banking-system-payment-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +28,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="banking-system" options="-parameters" />
+      <module name="banking-system-payment-api" options="-parameters" />
+      <module name="banking-system-payment-business" options="-parameters" />
+      <module name="banking-system-payment-data-provider" options="-parameters" />
+      <module name="banking-system-payment-worker" options="-parameters" />
       <module name="banking-system-transfer-api" options="-parameters" />
       <module name="banking-system-transfer-business" options="-parameters" />
       <module name="banking-system-transfer-data-provider" options="-parameters" />
