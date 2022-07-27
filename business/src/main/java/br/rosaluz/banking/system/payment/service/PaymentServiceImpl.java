@@ -35,7 +35,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public  void payment(Payment payment){
-        makePayment(payment);
+        //makePayment(payment);
         paymentProducer.send(payment);
         save(payment);
     }

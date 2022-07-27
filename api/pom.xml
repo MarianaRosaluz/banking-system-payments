@@ -9,9 +9,15 @@
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>br.rosaluz.banking.system.payment</groupId>-->
+<!--			<artifactId>banking-system-payment-business</artifactId>-->
+<!--			<version>1.0-SNAPSHOT</version>-->
+<!--			<scope>compile</scope>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>br.rosaluz.banking.system.payment</groupId>
-			<artifactId>banking-system-payment-business</artifactId>
+			<artifactId>banking-system-payment-worker</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
